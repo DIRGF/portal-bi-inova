@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal BI Fundação INOVA</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="toggle-float" onclick="voltarPortal()">
+        ☰
+    </div>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="img/logo-inova.png" alt="Fundação INOVA">
+        </div>
+
+        <div class="toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="menu">
+
+            <div class="menu-item" onclick="voltarPortal()">
+                🏠 <span>Home</span>
+            </div>
+
+            <div class="menu-title">
+                Contabilidade
+            </div>
+
+            <div class="menu-item" onclick="abrirPainel('contabilCorporativo')">
+                📊 <span>Corporativo</span>
+            </div>
+
+            <div class="menu-item" onclick="abrirPainel('contabilUnidades')">
+                🏥 <span>Unidades</span>
+            </div>
+
+            <div class="menu-title">
+                Compras e Contratos
+            </div>
+
+            <div class="menu-item" onclick="abrirPainel('contratos')">
+                📋 <span>Contratos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="header">
+
+            <div class="header-title">
+                Portal BI Fundação INOVA
+            </div>
+
+            <div class="user-area">
+                Portal BI v1.0
+            </div>
+
+        </div>
+
+        <div id="home">
+
+            <h1 class="titulo-home">
+                Portal BI Fundação INOVA
+            </h1>
+
+            <p class="subtitulo-home">
+                Selecione um painel para iniciar a navegação.
+            </p>
+
+            <div class="cards">
+
+                <div class="card" onclick="abrirPainel('contratos')">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">Contratos</div>
+                </div>
+
+                <div class="card" onclick="abrirPainel('contabilCorporativo')">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Contabilidade Corporativo</div>
+                </div>
+
+                <div class="card" onclick="abrirPainel('contabilUnidades')">
+                    <div class="card-icon">🏥</div>
+                    <div class="card-title">Contabilidade Unidades</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="viewer">
+
+            <iframe
+                id="painelFrame"
+                title="Power BI">
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
