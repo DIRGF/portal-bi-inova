@@ -51,3 +51,13 @@ function toggleMenu(){
         .classList
         .toggle("collapsed");
 }
+
+function logout(){
+
+    sessionStorage.removeItem(
+        "portalbi"
+    );
+
+    window.location =
+        "login.html";
+}
