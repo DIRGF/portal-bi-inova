@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal BI INOVA - Login</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f6fb;
+    font-family:Segoe UI,sans-serif;
+}
+
+.login-box{
+
+    width:350px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.login-box img{
+
+    width:180px;
+
+    margin-bottom:20px;
+}
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    box-sizing:border-box;
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#132c73;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+button:hover{
+    background:#0f245e;
+}
+
+.erro{
+
+    color:red;
+
+    margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <img src="img/logo-inova.png">
+
+    <h2>Portal BI Fundação INOVA</h2>
+
+    <input
+        type="text"
+        id="usuario"
+        placeholder="Usuário">
+
+    <input
+        type="password"
+        id="senha"
+        placeholder="Senha">
+
+    <button onclick="login()">
+        Entrar
+    </button>
+
+    <div class="erro" id="erro"></div>
+
+</div>
+
+<script>
+
+function login(){
+
+    const usuario =
+        document.getElementById("usuario").value;
+
+    const senha =
+        document.getElementById("senha").value;
+
+    if(
+        usuario==="diretoria"
+        &&
+        senha==="Inova2026"
+    ){
+
+        sessionStorage.setItem(
+            "portalbi",
+            "autenticado"
+        );
+
+        window.location="index.html";
+    }
+    else{
+
+        document.getElementById("erro")
+            .innerHTML =
+            "Usuário ou senha inválidos.";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
