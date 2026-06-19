@@ -1,3 +1,7 @@
+// =========================
+// PAINÉIS
+// =========================
+
 const paineis = {
 
     contratos: {
@@ -17,32 +21,56 @@ const paineis = {
 
 };
 
+// =========================
+// ABRIR PAINEL
+// =========================
+
 function abrirPainel(chave){
 
     const painel = paineis[chave];
 
-    document.body.classList.add("dashboard-mode");
+    if(!painel){
+        alert("Painel não encontrado.");
+        return;
+    }
 
-    document.getElementById("home").style.display = "none";
+    document.body.classList.add(
+        "dashboard-mode"
+    );
 
-    document.getElementById("viewer").style.display = "block";
+    document.getElementById("home")
+        .style.display = "none";
 
-    document.getElementById("painelFrame").src =
-        painel.url;
+    document.getElementById("viewer")
+        .style.display = "block";
+
+    document.getElementById("painelFrame")
+        .src = painel.url;
 }
+
+// =========================
+// VOLTAR
+// =========================
 
 function voltarPortal(){
 
-    document.body.classList.remove("dashboard-mode");
+    document.body.classList.remove(
+        "dashboard-mode"
+    );
 
-    document.getElementById("viewer").style.display =
-        "none";
+    document.getElementById("viewer")
+        .style.display = "none";
 
-    document.getElementById("home").style.display =
-        "block";
+    document.getElementById("home")
+        .style.display = "block";
 
-    document.getElementById("painelFrame").src = "";
+    document.getElementById("painelFrame")
+        .src = "";
 }
+
+// =========================
+// MENU
+// =========================
 
 function toggleMenu(){
 
@@ -52,12 +80,16 @@ function toggleMenu(){
         .toggle("collapsed");
 }
 
+// =========================
+// LOGOUT
+// =========================
+
 function logout(){
 
     sessionStorage.removeItem(
         "portalbi"
     );
 
-    window.location =
+    window.location.href =
         "login.html";
 }
