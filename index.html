@@ -3,6 +3,20 @@
 
 <head>
 
+
+<script>
+
+if(
+    sessionStorage.getItem("portalbi")
+    !==
+    "autenticado"
+){
+    window.location="login.html";
+}
+
+</script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -67,11 +81,16 @@
             </div>
 
             <div class="user-area">
-                Portal BI v1.0
-            </div>
 
-        </div>
+    <button
+        onclick="logout()"
+        class="logout">
 
+        Sair
+
+    </button>
+
+</div>
         <div id="home">
 
             <h1 class="titulo-home">
