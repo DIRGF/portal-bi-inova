@@ -8,18 +8,6 @@
 
 <title>Portal BI Fundação INOVA</title>
 
-<script>
-
-if(
-    sessionStorage.getItem("portalbi")
-    !==
-    "autenticado"
-){
-    window.location.href="login.html";
-}
-
-</script>
-
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -52,16 +40,12 @@ if(
 
         <div class="menu-item"
              onclick="abrirPainel('contabilCorporativo')">
-
             📊 <span>Corporativo</span>
-
         </div>
 
         <div class="menu-item"
              onclick="abrirPainel('contabilUnidades')">
-
             🏥 <span>Unidades</span>
-
         </div>
 
         <div class="menu-title">
@@ -70,9 +54,7 @@ if(
 
         <div class="menu-item"
              onclick="abrirPainel('contratos')">
-
             📋 <span>Contratos</span>
-
         </div>
 
     </div>
@@ -92,9 +74,7 @@ if(
             <button
                 class="logout"
                 onclick="logout()">
-
                 Sair
-
             </button>
 
         </div>
@@ -115,35 +95,26 @@ if(
 
             <div class="card"
                  onclick="abrirPainel('contratos')">
-
                 <div class="card-icon">📋</div>
-
                 <div class="card-title">
                     Contratos
                 </div>
-
             </div>
 
             <div class="card"
                  onclick="abrirPainel('contabilCorporativo')">
-
                 <div class="card-icon">📊</div>
-
                 <div class="card-title">
                     Contabilidade Corporativo
                 </div>
-
             </div>
 
             <div class="card"
                  onclick="abrirPainel('contabilUnidades')">
-
                 <div class="card-icon">🏥</div>
-
                 <div class="card-title">
                     Contabilidade Unidades
                 </div>
-
             </div>
 
         </div>
