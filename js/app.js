@@ -81,15 +81,11 @@ function toggleMenu(){
 }
 
 // =========================
-// LOGOUT
+// LOGOUT CLOUDFLARE ACCESS
 // =========================
 
 function logout(){
 
-    sessionStorage.removeItem(
-        "portalbi"
-    );
-
     window.location.href =
-        "login.html";
+        "/cdn-cgi/access/logout";
 }
