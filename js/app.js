@@ -81,5 +81,12 @@ function toggleMenu(){
 }
 
 function logout(){
-    window.location.href = "/";
+
+    if(confirm("Deseja realmente sair do Portal BI?")){
+
+        window.location.href =
+            "https://www.google.com";
+
+    }
+
 }
