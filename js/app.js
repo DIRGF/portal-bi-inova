@@ -85,12 +85,9 @@ function toggleMenu(){
         .toggle("collapsed");
 }
 
+
 function logout(){
-
     if(confirm("Deseja fechar o portal?")){
-
-        window.location.href = "about:blank";
-
+        window.location.href = "https://www.inovacapixaba.es.gov.br";
     }
-
 }
