@@ -80,12 +80,3 @@ function toggleMenu(){
         .toggle("collapsed");
 }
 
-// =========================
-// LOGOUT CLOUDFLARE ACCESS
-// =========================
-
-function logout(){
-
-    window.location.href =
-        "/cdn-cgi/access/logout";
-}
