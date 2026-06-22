@@ -82,10 +82,9 @@ function toggleMenu(){
 
 function logout(){
 
-    if(confirm("Deseja realmente sair do Portal BI?")){
+    if(confirm("Deseja fechar o portal?")){
 
-        window.location.href =
-            "https://www.google.com";
+        window.location.href = "about:blank";
 
     }
 
