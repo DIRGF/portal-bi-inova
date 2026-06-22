@@ -80,3 +80,6 @@ function toggleMenu(){
         .toggle("collapsed");
 }
 
+function logout(){
+    window.location.href = "/";
+}
