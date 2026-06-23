@@ -32,7 +32,13 @@ const paineis = {
     indicadoresHospitalares: {
         titulo: "Indicadores Hospitalares",
         url: "https://app.powerbi.com/view?r=eyJrIjoiZTYxNzdlMmUtMjYzNC00NDI3LWIzMzAtZjEwYzFjOGViYTUxIiwidCI6IjM1YWFmNDRiLWQ2Y2EtNGU1OC1hMmRhLTg5ODZkYzgxZTMzNCJ9"
-    }
+    },
+
+
+    trello: {
+        titulo: "Trello",
+        url: "https://trello.com/u/jorgeteixeiraneto/boards"
+}
 
 };
 
@@ -90,4 +96,13 @@ function logout(){
     if(confirm("Deseja fechar o portal?")){
         window.location.href = "https://www.inovacapixaba.es.gov.br";
     }
+}
+
+function abrirTrello(){
+
+    window.open(
+        "https://trello.com/u/jorgeteixeiraneto/boards",
+        "_blank"
+    );
+
 }
