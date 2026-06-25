@@ -18,11 +18,8 @@
 }
 
 body{
-
     display:flex;
-    height:100vh;
-    overflow:hidden;
-
+    min-height:100vh;
     background:var(--fundo);
 }
 
@@ -36,6 +33,10 @@ body{
 
     display:flex;
     flex-direction:column;
+
+    height:100vh;
+
+    overflow:hidden;
 
     transition:.3s;
 }
@@ -89,10 +90,11 @@ body{
 }
 
 .menu{
-
     flex:1;
-
     overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
 }
 
 .menu-title{
@@ -141,13 +143,11 @@ body{
 }
 
 .content{
-
     flex:1;
-
     display:flex;
     flex-direction:column;
+    overflow:auto;
 }
-
 .header{
 
     height:45px;
@@ -320,4 +320,34 @@ body{
 .logout:hover{
 
     background:#b02a37;
+}
+
+
+@media (max-width:1024px){
+
+    .sidebar{
+        width:70px;
+    }
+
+    .menu-title{
+        display:none;
+    }
+
+    .menu-item{
+        justify-content:center;
+    }
+
+    .menu-item span{
+        display:none;
+    }
+
+    .logo img{
+        width:35px;
+    }
+
+    .cards{
+        grid-template-columns:
+            repeat(auto-fit,minmax(180px,1fr));
+    }
+
 }
