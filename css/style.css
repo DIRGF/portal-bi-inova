@@ -36,6 +36,9 @@ body{
 
     height:100vh;
 
+    position:sticky;
+    top:0;
+
     overflow:hidden;
 
     transition:.3s;
@@ -90,11 +93,15 @@ body{
 }
 
 .menu{
-    flex:1;
+
+    height:calc(100vh - 130px);
+
     overflow-y:auto;
     overflow-x:hidden;
 
     -webkit-overflow-scrolling:touch;
+
+    touch-action:pan-y;
 }
 
 .menu-title{
@@ -146,8 +153,9 @@ body{
     flex:1;
     display:flex;
     flex-direction:column;
-    overflow:auto;
 }
+
+
 .header{
 
     height:45px;
