@@ -1,115 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portal BI Fundação INOVA</title>
+<title>Portal BI Fundação INOVA - V2</title>
 
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
 <div class="toggle-float" onclick="voltarPortal()">
-☰
+    <i class="bi bi-arrow-left"></i>
 </div>
 
-<div class="sidebar">
+<aside class="sidebar">
 
     <div class="logo">
-        <img src="img/logo-inova.png" alt="INOVA">
+        <img src="img/logo-inova.png" alt="Fundação INOVA">
     </div>
 
     <div class="toggle" onclick="toggleMenu()">
-        ☰
+        <i class="bi bi-list"></i>
     </div>
 
-    <div class="menu">
+    <nav class="menu" id="menuContainer">
+        <!-- Gerado automaticamente pelo app.js -->
+    </nav>
 
-        <div class="menu-item" onclick="voltarPortal()">
-            🏠 <span>Home</span>
-        </div>
+</aside>
 
-        <div class="menu-title">
-            Contabilidade
-        </div>
+<main class="content">
 
-        <div class="menu-item"
-             onclick="abrirPainel('contabilCorporativo')">
-            📊 <span>Corporativo</span>
-        </div>
-
-        <div class="menu-item"
-             onclick="abrirPainel('contabilUnidades')">
-            🏥 <span>Unidades</span>
-        </div>
-
-        <div class="menu-title">
-            Compras e Contratos
-        </div>
-
-        <div class="menu-item"
-             onclick="abrirPainel('contratos')">
-            📋 <span>Contratos</span>
-        </div>
-
-        <div class="menu-item"
-             onclick="abrirPainel('processosEdocs')">
-            📄 <span>Processos E-Docs</span>
-        </div>
-
-        <div class="menu-title">
-            Assistencial
-        </div>
-
-        <div class="menu-item"
-             onclick="abrirPainel('valoresServicos')">
-            💰 <span>Valores de Serviços e Exames</span>
-        </div>
-
-        <div class="menu-item"
-             onclick="abrirPainel('indicadoresHospitalares')">
-            📈 <span>Indicadores Hospitalares</span>
-        </div>
-
-	<div class="menu-title">
-    Gestão
-</div>
-
-<div class="menu-item"
-     onclick="abrirTrello()">
-    📌 <span>Trello</span>
-</div>
-
-    </div>
-
-</div>
-
-<div class="content">
-
-    <div class="header">
+    <header class="header">
 
         <div class="header-title">
-            Portal BI Fundação INOVA - v 1.0
+            Portal BI Fundação INOVA
         </div>
 
         <div class="user-area">
 
-            <button
-                class="logout"
-                onclick="logout()">
+            <button class="logout" onclick="logout()">
+                <i class="bi bi-box-arrow-right"></i>
                 Sair
             </button>
 
         </div>
 
-    </div>
+    </header>
 
-    <div id="home">
+    <section id="home">
 
         <h1 class="titulo-home">
             Portal BI Fundação INOVA
@@ -119,86 +60,22 @@
             Selecione um painel para iniciar a navegação.
         </p>
 
-        <div class="cards">
-
-            <div class="card"
-                 onclick="abrirPainel('contratos')">
-                <div class="card-icon">📋</div>
-                <div class="card-title">
-                    Contratos
-                </div>
-            </div>
-
-            <div class="card"
-                 onclick="abrirPainel('contabilCorporativo')">
-                <div class="card-icon">📊</div>
-                <div class="card-title">
-                    Contabilidade Corporativo
-                </div>
-            </div>
-
-            <div class="card"
-                 onclick="abrirPainel('contabilUnidades')">
-                <div class="card-icon">🏥</div>
-                <div class="card-title">
-                    Contabilidade Unidades
-                </div>
-            </div>
-
-            <div class="card"
-                 onclick="abrirPainel('processosEdocs')">
-                <div class="card-icon">📄</div>
-                <div class="card-title">
-                    Processos E-Docs
-                </div>
-            </div>
-
-            <div class="card"
-                 onclick="abrirPainel('valoresServicos')">
-                <div class="card-icon">💰</div>
-                <div class="card-title">
-                    Valores de Serviços e Exames
-                </div>
-            </div>
-
-            <div class="card"
-                 onclick="abrirPainel('indicadoresHospitalares')">
-                <div class="card-icon">📈</div>
-                <div class="card-title">
-                    Indicadores Hospitalares
-                </div>
-            </div>
-
-	<div class="card"
-     onclick="abrirTrello()">
-    <div class="card-icon">📌</div>
-    <div class="card-title">
-        Trello
-    </div>
-</div>
-
-
+        <div id="cardsContainer" class="cards">
+            <!-- Gerado automaticamente -->
         </div>
 
-    </div>
+    </section>
 
-    <div id="viewer">
+    <section id="viewer">
 
         <iframe
             id="painelFrame"
             title="Power BI">
         </iframe>
 
-    </div>
+    </section>
 
-</div>
-
-<script src="js/app.js"></script>
-
-
-<!-- ========================= -->
-<!-- MODAL ABRIR PAINEL -->
-<!-- ========================= -->
+</main>
 
 <div id="modalAbrir" class="modal">
 
@@ -206,25 +83,26 @@
 
         <h2>Abrir Painel</h2>
 
+        <h3 id="tituloPainel"></h3>
+
         <p>Como deseja visualizar este painel?</p>
 
         <div class="modal-buttons">
 
-            <button
-                class="btn-modal btn-portal"
-                onclick="abrirNoPortal()">
-                🖥 Abrir no Portal
+            <button class="btn-modal btn-portal"
+                    onclick="abrirNoPortal()">
+                <i class="bi bi-display"></i>
+                Abrir no Portal
             </button>
 
-            <button
-                class="btn-modal btn-novaaba"
-                onclick="abrirNovaAba()">
-                🌐 Abrir em Nova Aba
+            <button class="btn-modal btn-novaaba"
+                    onclick="abrirNovaAba()">
+                <i class="bi bi-box-arrow-up-right"></i>
+                Abrir em Nova Aba
             </button>
 
-            <button
-                class="btn-modal btn-cancelar"
-                onclick="fecharModal()">
+            <button class="btn-modal btn-cancelar"
+                    onclick="fecharModal()">
                 Cancelar
             </button>
 
@@ -234,6 +112,7 @@
 
 </div>
 
-	
+<script src="js/app.js"></script>
+
 </body>
 </html>
