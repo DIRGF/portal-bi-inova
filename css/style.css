@@ -359,3 +359,131 @@ body{
     }
 
 }
+
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:99999;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-box{
+
+    width:380px;
+
+    max-width:90%;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    text-align:center;
+
+}
+
+.modal-box h2{
+
+    color:var(--azul);
+
+    margin-bottom:12px;
+
+}
+
+.modal-box p{
+
+    margin-bottom:25px;
+
+    color:#555;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.btn-modal{
+
+    border:none;
+
+    padding:13px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.btn-portal{
+
+    background:#132c73;
+
+    color:white;
+
+}
+
+.btn-portal:hover{
+
+    background:#1d4ed8;
+
+}
+
+.btn-novaaba{
+
+    background:#198754;
+
+    color:white;
+
+}
+
+.btn-novaaba:hover{
+
+    background:#157347;
+
+}
+
+.btn-cancelar{
+
+    background:#e9ecef;
+
+}
+
+.btn-cancelar:hover{
+
+    background:#d6d8db;
+
+}
