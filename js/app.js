@@ -90,7 +90,7 @@ function gerarMenu(){
     <div class="menu-item" onclick="abrirTrello()">
         <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>   
     </div>
-         <div class="menu-item" onclick="abrirTrello()">
+         <div class="menu-item" onclick="abrirEdocs()">
         <i class="bi bi-kanban" style="color: #0079bf;"></i><span>E-docs</span>    
     </div>`;
         }
@@ -121,7 +121,7 @@ function gerarCards(){
 
 
  cards.innerHTML+=`
-    <div class="card" onclick="abrirTrello()">
+    <div class="card" onclick="abrirEdocs()">
         <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
             <i class="bi bi-kanban"></i>
         </div>
@@ -175,3 +175,8 @@ function logout(){
 function abrirTrello(){
     window.open("https://trello.com/u/jorgeteixeiraneto/boards","_blank");
 }
+
+function abrirEdocs(){
+    window.open("https://e-docs.es.gov.br/Internal","_blank");
+}
+
