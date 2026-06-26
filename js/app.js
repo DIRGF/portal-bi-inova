@@ -126,9 +126,9 @@ function gerarCards(){
         <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
             <i class="bi bi-kanban"></i>
         </div>
-        <strong>Trello</strong>
+        <strong>E-docs</strong>
     </div>`;
-}E-docs
+}
 
 
 
