@@ -88,9 +88,15 @@ function gerarMenu(){
     menu.innerHTML+=`
     <div class="menu-title">Gestão</div>
     <div class="menu-item" onclick="abrirTrello()">
-        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>
+        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>    
+    </div>
+        
+        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>    
     </div>`;
-}
+        }
+
+
+    
 
 
 
