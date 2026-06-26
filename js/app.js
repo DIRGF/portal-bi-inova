@@ -91,14 +91,9 @@ function gerarMenu(){
         <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>   
     </div>
          <div class="menu-item" onclick="abrirTrello()">
-        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>    
+        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>E-docs</span>    
     </div>`;
         }
-
-
-    
-
-
 
 
 function gerarCards(){
