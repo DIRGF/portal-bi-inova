@@ -121,8 +121,6 @@ function gerarCards(){
 }
 
 
-
-
 function abrirPainel(chave){
     painelSelecionado=paineis[chave];
     document.getElementById("tituloPainel").textContent=painelSelecionado.titulo;
