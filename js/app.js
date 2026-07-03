@@ -235,13 +235,23 @@ cards.innerHTML+=`
     </div>`;
          
 
-     cards.innerHTML+=`
+    cards.innerHTML+=`
     <div class="card" onclick="abrirEfetivo()">
-        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-            <i class="bi bi-search"></i>
+        <div style="margin-bottom:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
+                <!-- Fundo Azul (Hexágono Chanfrado) -->
+                <path d="M 30 5 H 85 A 10 10 0 0 1 95 15 V 70 L 70 95 H 15 A 10 10 0 0 1 5 85 V 30 Z" fill="#0A3A66"/>
+                
+                <!-- Seta Verde Superior Direita -->
+                <path d="M 58 15 H 78 A 7 7 0 0 1 85 22 V 42 H 71 V 29 H 58 Z" fill="#B2D235"/>
+                
+                <!-- Letra 'e' branca em itálico -->
+                <text x="44" y="74" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-style="italic" font-size="75" text-anchor="middle">e</text>
+            </svg>
         </div>
-        <strong>Efetivo</strong>
+        <strong>Effetivo</strong>
     </div>`;
+
 
  cards.innerHTML+=`
     <div class="card" onclick="abrirDRG()">
