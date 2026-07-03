@@ -150,11 +150,24 @@ function gerarMenu(){
 
  cards.innerHTML+=`
     <div class="card" onclick="abrirEdocs()">
-        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-            <i class="bi bi-window-dock"></i>
+        <div style="margin-bottom:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 100 100">
+                <!-- Fundo azul com cantos levemente arredondados -->
+                <rect width="100" height="100" fill="#007DC5" rx="4"/>
+                
+                <!-- Letra E robusta -->
+                <path d="M 15 15 H 60 V 33 H 37 V 41 H 55 V 59 H 37 V 67 H 60 V 85 H 15 Z" fill="#ffffff"/>
+                
+                <!-- Letras DOCS maiúsculas, em negrito e empilhadas -->
+                <text x="78" y="28" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="18" text-anchor="middle">D</text>
+                <text x="78" y="47" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="18" text-anchor="middle">O</text>
+                <text x="78" y="66" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="18" text-anchor="middle">C</text>
+                <text x="78" y="85" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="18" text-anchor="middle">S</text>
+            </svg>
         </div>
         <strong>E-docs</strong>
     </div>`;
+
 
  cards.innerHTML+=`
     <div class="card" onclick="abrirKPIH()">
