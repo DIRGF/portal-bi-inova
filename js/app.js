@@ -117,7 +117,7 @@ function gerarMenu(){
     </div>
 
         <div class="menu-item" onclick="abrirBionexo()">
-        <i class="bi bi-cart2" style="color: #bf6c00ce;"></i><span>Bionexo</span>    
+        <i class="bi bi-cart2" style="color: #ffffff;"></i><span>Bionexo</span>    
     </div>`;
         
 }
