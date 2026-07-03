@@ -233,12 +233,7 @@ cards.innerHTML+=`
         </div>
         <strong>GPI</strong>
     </div>`;
-
-
-
-
-
-            
+         
 
      cards.innerHTML+=`
     <div class="card" onclick="abrirEfetivo()">
@@ -250,8 +245,19 @@ cards.innerHTML+=`
 
  cards.innerHTML+=`
     <div class="card" onclick="abrirDRG()">
-        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-           <i class="bi bi-award-fill"></i>
+        <div style="margin-bottom:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
+                <!-- Fundo verde-água com cantos bem arredondados -->
+                <rect width="100" height="100" fill="#00B3A6" rx="25"/>
+                
+                <!-- Texto alinhado à esquerda -->
+                <text x="7" y="55" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" letter-spacing="-0.5">
+                    <tspan font-weight="bold">DRG</tspan> Brasil
+                </text>
+                
+                <!-- Círculo branco à direita -->
+                <circle cx="82" cy="50" r="18" fill="#ffffff"/>
+            </svg>
         </div>
         <strong>DRG</strong>
     </div>`;
