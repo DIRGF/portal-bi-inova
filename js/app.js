@@ -119,9 +119,6 @@ function gerarMenu(){
         
 }
 
-
-
-
 // CRIACAO DOS CARDS QUE VAO ABRIR EM NOVA ABA DIRETAMENTE
 
         function gerarCards(){
@@ -151,7 +148,7 @@ function gerarMenu(){
  cards.innerHTML+=`
     <div class="card" onclick="abrirEdocs()">
         <div style="margin-bottom:10px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 100 100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
                 <!-- Fundo azul com cantos levemente arredondados -->
                 <rect width="100" height="100" fill="#007DC5" rx="4"/>
                 
@@ -177,13 +174,71 @@ function gerarMenu(){
         <strong>KPIH</strong>
     </div>`;
 
- cards.innerHTML+=`
+cards.innerHTML+=`
     <div class="card" onclick="abrirGPI()">
-        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-            <i class="bi bi-calculator-fill"></i>
+        <div style="margin-bottom:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
+                <!-- Fundo cinza escuro/azulado imitando a imagem -->
+                <!--<rect width="100" height="100" fill="#333e4f" rx="6"/> -->
+                
+                <defs>
+                    <!-- Gradiente Vermelho/Laranja (Topo Direita) -->
+                    <linearGradient id="gradRed" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ee6b5e"/>
+                        <stop offset="100%" stop-color="#df6746"/>
+                    </linearGradient>
+                    
+                    <!-- Gradiente Amarelo (Base Direita) -->
+                    <linearGradient id="gradYel" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f8c055"/>
+                        <stop offset="100%" stop-color="#d99738"/>
+                    </linearGradient>
+                    
+                    <!-- Gradiente Verde (Base Central) -->
+                    <linearGradient id="gradGrn" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#b6da67"/>
+                        <stop offset="100%" stop-color="#7cb551"/>
+                    </linearGradient>
+                    
+                    <!-- Gradiente Azul (Base Esquerda) -->
+                    <linearGradient id="gradBlu" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#7eabdf"/>
+                        <stop offset="100%" stop-color="#517cb4"/>
+                    </linearGradient>
+                    
+                    <!-- Gradiente Roxo (Topo Esquerda) -->
+                    <linearGradient id="gradPurp" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ba86c2"/>
+                        <stop offset="100%" stop-color="#835d94"/>
+                    </linearGradient>
+
+                    <!-- Molde único da "Pessoa" que será repetido e rotacionado -->
+                    <g id="pessoa">
+                        <circle cx="50" cy="13" r="6.5"/>
+                        <path d="M 30 21
+                                 Q 50 30 70 21
+                                 A 6 6 0 0 0 64 29
+                                 Q 50 42 36 29
+                                 A 6 6 0 0 0 30 21 Z"/>
+                    </g>
+                </defs>
+
+                <!-- Inserção das 5 pessoas com suas respectivas cores e rotações (72 graus de diferença) -->
+                <use href="#pessoa" fill="url(#gradRed)" transform="rotate(36 50 50)"/>
+                <use href="#pessoa" fill="url(#gradYel)" transform="rotate(108 50 50)"/>
+                <use href="#pessoa" fill="url(#gradGrn)" transform="rotate(180 50 50)"/>
+                <use href="#pessoa" fill="url(#gradBlu)" transform="rotate(252 50 50)"/>
+                <use href="#pessoa" fill="url(#gradPurp)" transform="rotate(324 50 50)"/>
+            </svg>
         </div>
         <strong>GPI</strong>
     </div>`;
+
+
+
+
+
+            
 
      cards.innerHTML+=`
     <div class="card" onclick="abrirEfetivo()">
