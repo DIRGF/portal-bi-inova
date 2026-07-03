@@ -3,6 +3,12 @@
 // PORTAL BI FUNDAÇÃO INOVA - V2
 // ===============================
 
+
+
+
+
+// CRIAÇÃO DOS PAINÉIS - CARDS
+
 const paineis = {
 
     contabilCorporativo:{
@@ -69,7 +75,7 @@ function gerarMenu(){
     const menu=document.getElementById("menuContainer");
     let grupoAtual="";
 
-    menu.innerHTML='<div class="menu-item" onclick="voltarPortal()"><i class="bi bi-house" style="color: #666;"></i><span>Home</span></div>';
+    menu.innerHTML='<div class="menu-item" onclick="voltarPortal()"><i class="bi bi-house" style="color: #ece2e2;"></i><span>Home</span></div>';
 
     Object.entries(paineis).forEach(([chave,p])=>{
 
@@ -88,15 +94,37 @@ function gerarMenu(){
     menu.innerHTML+=`
     <div class="menu-title">Gestão</div>
     <div class="menu-item" onclick="abrirTrello()">
-        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>Trello</span>   
+        <i class="bi bi-trello" style="color: #0079bf;"></i><span>Trello</span>   
     </div>
          <div class="menu-item" onclick="abrirEdocs()">
-        <i class="bi bi-kanban" style="color: #0079bf;"></i><span>E-docs</span>    
+        <i class="bi bi-window-dock" style="color: #bec0c2;"></i><span>E-docs</span>    
+    </div>
+    
+         <div class="menu-item" onclick="abrirKPIH()">
+        <i class="bi bi-cash-coin" style="color: #10bf00ce;"></i><span>KPIH</span>    
+    </div>
+    
+    
+          <div class="menu-item" onclick="abrirGPI()">
+        <i class="bi bi-calculator-fill" style="color: #bfac00ce;"></i><span>GPI</span>    
+    </div>
+    
+         <div class="menu-item" onclick="abrirEfetivo()">
+        <i class="bi bi-search" style="color: #0089bfce;"></i><span>Efetivo</span>    
+    </div>
+
+         <div class="menu-item" onclick="abrirDRG()">
+        <i class="bi bi-award-fill" style="color: #bf6c00ce;"></i><span>DRG</span>    
     </div>`;
-        }
+        
+}
 
 
-function gerarCards(){
+
+
+// CRIACAO DOS CARDS QUE VAO ABRIR EM NOVA ABA DIRETAMENTE
+
+        function gerarCards(){
 
     const cards=document.getElementById("cardsContainer");
 
@@ -114,7 +142,7 @@ function gerarCards(){
     cards.innerHTML+=`
     <div class="card" onclick="abrirTrello()">
         <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-            <i class="bi bi-kanban"></i>
+            <i class="bi bi-trello"></i>
         </div>
         <strong>Trello</strong>
     </div>`;
@@ -123,14 +151,44 @@ function gerarCards(){
  cards.innerHTML+=`
     <div class="card" onclick="abrirEdocs()">
         <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
-            <i class="bi bi-kanban"></i>
+            <i class="bi bi-window-dock"></i>
         </div>
         <strong>E-docs</strong>
     </div>`;
 
-    
-}
+ cards.innerHTML+=`
+    <div class="card" onclick="abrirKPIH()">
+        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
+           <i class="bi bi-cash-coin"></i>
+        </div>
+        <strong>KPIH</strong>
+    </div>`;
 
+ cards.innerHTML+=`
+    <div class="card" onclick="abrirGPI()">
+        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
+            <i class="bi bi-calculator-fill"></i>
+        </div>
+        <strong>GPI</strong>
+    </div>`;
+
+     cards.innerHTML+=`
+    <div class="card" onclick="abrirEfetivo()">
+        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
+            <i class="bi bi-search"></i>
+        </div>
+        <strong>Efetivo</strong>
+    </div>`;
+
+ cards.innerHTML+=`
+    <div class="card" onclick="abrirDRG()">
+        <div style="font-size:34px;margin-bottom:10px; color: #0079bf;">
+           <i class="bi bi-award-fill"></i>
+        </div>
+        <strong>DRG</strong>
+    </div>`;
+
+}
 
 function abrirPainel(chave){
     painelSelecionado=paineis[chave];
@@ -179,4 +237,23 @@ function abrirTrello(){
 function abrirEdocs(){
     window.open("https://e-docs.es.gov.br/Internal","_blank");
 }
+
+function abrirKPIH(){
+    window.open("https://www.kpih.com.br/acesso/paginaInicial","_blank");
+}
+
+function abrirGPI(){
+    window.open("https://gpi31.cloud.el.com.br/ServerExec/acessoBase/","_blank");
+}
+
+function abrirEfetivo(){
+    window.open("https://acesso.effettivo.com.br/frm_Default.aspx","_blank");
+}
+
+function abrirDRG(){
+    window.open("https://sigclinic.sigquali.com.br/qualidade/inicial.do?evento=cookie#","_blank");
+}
+
+
+
 
