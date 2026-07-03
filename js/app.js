@@ -103,8 +103,7 @@ function gerarMenu(){
          <div class="menu-item" onclick="abrirKPIH()">
         <i class="bi bi-cash-coin" style="color: #10bf00ce;"></i><span>KPIH</span>    
     </div>
-    
-    
+       
           <div class="menu-item" onclick="abrirGPI()">
         <i class="bi bi-calculator-fill" style="color: #bfac00ce;"></i><span>GPI</span>    
     </div>
@@ -115,7 +114,7 @@ function gerarMenu(){
 
          <div class="menu-item" onclick="abrirDRG()">
         <i class="bi bi-award-fill" style="color: #bf6c00ce;"></i><span>DRG</span>    
-    </div>`;
+    </div>
 
         <div class="menu-item" onclick="abrirBionexo()">
         <i class="bi bi-cart2" style="color: #bf6c00ce;"></i><span>Bionexo</span>    
