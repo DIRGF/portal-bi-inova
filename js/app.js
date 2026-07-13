@@ -129,16 +129,37 @@ function gerarMenu(){
 
     const cards=document.getElementById("cardsContainer");
 
-    Object.entries(paineis).forEach(([chave,p])=>{
 
-        cards.innerHTML+=`
-        <div class="card" onclick="abrirPainel('${chave}')">
-            <div style="font-size:34px;margin-bottom:10px; color: ${p.cor};">
-                <i class="bi ${p.icone}"></i>
+Object.entries(paineis).forEach(([chave,p])=>{
+
+    cards.innerHTML+=`
+    <div class="card" onclick="abrirPainel('${chave}')">
+        <div style="font-size:34px;margin-bottom:10px; color:${p.cor};">
+            <i class="bi ${p.icone}"></i>
+        </div>
+        <strong>${p.titulo}</strong>
+    </div>`;
+
+    // Insere o Power BI logo após Contabilidade Unidades
+    if (chave === "contabilUnidades") {
+
+        cards.innerHTML += `
+        <div class="card" onclick="abrirPowerBi()">
+            <div style="margin-bottom:10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="11" width="3.8" height="9" rx="0.9" fill="#F2C811"/>
+                    <rect x="8.6" y="7" width="3.8" height="13" rx="0.9" fill="#F2C811"/>
+                    <rect x="13.2" y="3" width="4.6" height="17" rx="0.9" fill="#F2C811"/>
+                </svg>
             </div>
-            <strong>${p.titulo}</strong>
+            <strong>Power BI</strong>
         </div>`;
-    });
+    }
+
+});
+
+
 
     cards.innerHTML+=`
     <div class="card" onclick="abrirTrello()">
@@ -288,20 +309,7 @@ cards.innerHTML+=`
     </div>`;
 
 
-cards.innerHTML+=`
-    <div class="card" onclick="abrirPowerBi()">
-        <div style="margin-bottom:10px;">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none" />
-    <rect x="4" y="11" width="3.8" height="9" rx="0.9" fill="#F2C811" />
-    <rect x="8.6" y="7" width="3.8" height="13" rx="0.9" fill="#F2C811" />
-    <rect x="13.2" y="3" width="4.6" height="17" rx="0.9" fill="#F2C811" />
-</svg>
-   
-              </div>
-        <strong>Power BI</strong>
-    </div>`;
        
             
 }
