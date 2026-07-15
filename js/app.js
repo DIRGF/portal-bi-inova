@@ -409,8 +409,11 @@ function abrirZimbra(){
 // ==========================================
 
 async function carregarEventosDeHoje() {
+  // Seu link oficial do Zimbra
   const urlIcs = "https://prodest.correio.es.gov.br/home/jorgeneto@inovacapixaba.es.gov.br/Calendar.ics"; 
-  const urlProxy = "https://api.allorigins.win/raw?url=" + encodeURIComponent(urlIcs);
+  
+  // Usando um proxy mais forte (CodeTabs)
+  const urlProxy = "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(urlIcs);
 
   try {
     const resposta = await fetch(urlProxy);
