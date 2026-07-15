@@ -300,21 +300,29 @@ body{
 
 /* 2. SMARTPHONES: Mantém o menu, mas ajusta a rolagem e os cards */
 @media (max-width: 1024px) {
-    /* Força o container principal a ter rolagem própria, destravando a tela */
+    /* Trava a área de conteúdo no tamanho exato da tela */
+    .content {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden; /* Deixa o cabeçalho fixo e segura o tamanho */
+    }
+
+    /* Força a criação da barra de rolagem apenas na área dos cards */
     #home {
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* Deixa a rolagem fluida em iPhones */
-        height: calc(100vh - var(--header-height)); /* Define a altura exata da área visível */
+        flex: 1;
+        overflow-y: auto !important; 
+        -webkit-overflow-scrolling: touch; /* Rolagem fluida no mobile */
+        height: auto; 
     }
 
-    /* Ajusta os cards para ficarem um embaixo do outro no celular */
+    /* Ajusta os cards para 1 por linha e dá espaço no final para rolagem */
     .cards {
-        grid-template-columns: 1fr; /* 1 card por linha (evita que sejam cortados) */
-        padding: 15px; /* Reduz as bordas laterais para aproveitar mais a tela */
-        padding-bottom: 50px; /* Espaço extra no final para o último card não colar no fundo */
+        grid-template-columns: 1fr; 
+        padding: 15px; 
+        padding-bottom: 80px; /* Garante que o último card não fique escondido lá embaixo */
     }
 
-    /* Reduz um pouco os espaçamentos dos títulos para caberem bem no celular */
+    /* Reduz espaçamentos para caber melhor na tela do celular */
     .titulo-home {
         padding: 20px 15px 5px;
         font-size: 22px;
@@ -325,14 +333,13 @@ body{
         font-size: 14px;
     }
 
-    /* Ajustes no cabeçalho para o texto não sobrepor o botão de Sair */
+    /* Ajustes no cabeçalho */
     .header {
         padding: 0 15px;
     }
 
     .header-title {
-        font-size: 13px; /* Reduz a fonte do título longo no mobile */
-        white-space: normal; /* Permite quebrar linha se o celular for muito estreito */
+        font-size: 13px; 
+        white-space: normal; 
     }
 }
-
