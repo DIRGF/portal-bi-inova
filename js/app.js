@@ -197,25 +197,13 @@ Object.entries(paineis).forEach(([chave,p])=>{
 cards.innerHTML+=`
     <div class="card" onclick="abrirZimbra()">
         <div style="margin-bottom:10px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 460 460">
-                <rect width="460" height="460" rx="60" fill="#c72a2f"/>
-                <path d="M307.729 119.782h-152.01c-13.684 0-24.815 11.132-24.815 24.815 0 13.684 11.132 24.815 24.815 24.815h87.971L126.96 309.431c-5.253 5.421-8.219 12.637-8.219 20.174s2.966 14.754 8.219 20.174l6.096 6.096c5.42 5.253 12.637 8.219 20.174 8.219s14.754-2.966 20.174-8.219l121.737-120.301v88.375c0 13.684 11.132 24.815 24.815 24.815 13.684 0 24.815-11.131 24.815-24.815V144.597c.001-13.683-11.132-24.815-24.816-24.815z" fill="#fff"/>
-                <circle cx="169.043" cy="119.782" r="23.518" fill="#fff"/>
-                <circle cx="307.729" cy="365.176" r="23.518" fill="#fff"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50" fill="#132c73" />
+                <text x="50" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="65" fill="#ffffff">Z</text>
             </svg>
         </div>
         <strong>E-mail</strong>
     </div>`;
-
-
-
-
-
-
-
-
-
-
 
             
  cards.innerHTML+=`
