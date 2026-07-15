@@ -393,8 +393,8 @@ body{
         display: none; 
     }
 
-    /* NOVIDADE: Mantém o logo no topo do celular, mas um pouquinho menor para ficar delicado */
+    /* CORREÇÃO: Esconde o logo na barra superior do celular (ele já está no menu lateral) */
     .header-logo {
-        height: 28px;
+        display: none !important;
     }
 }
