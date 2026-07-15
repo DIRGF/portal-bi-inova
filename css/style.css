@@ -128,21 +128,32 @@ body{
     box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
+/* =========================================
+   CABEÇALHO (PC & MOBILE)
+   ========================================= */
 .header-left {
     display: flex;
     align-items: center;
-    gap: 20px; /* Cria um espaçamento elegante de 20px entre o Logo e o Título */
+    gap: 20px;
+    overflow: hidden; /* Impede que o conteúdo vaze da área delimitada */
+    flex: 1; /* Permite que o lado esquerdo ocupe o espaço disponível, mas respeite o botão Sair */
+    padding-right: 20px; /* Dá um respiro antes do botão de Sair */
 }
 
 .header-logo {
-    height: 38px; /* Altura ideal para ficar proporcional ao cabeçalho */
+    height: 38px;
     width: auto;
+    flex-shrink: 0; /* PROTETOR: Impede terminantemente que o logo seja espremido/amassado */
+    object-fit: contain; /* Garante que a proporção da imagem fique intacta */
 }
 
-.header-title{
-    color:var(--azul);
-    font-weight:700;
-    font-size:20px;
+.header-title {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 20px;
+    white-space: nowrap; /* PROTETOR: Impede que o texto quebre para a linha de baixo */
+    overflow: hidden; /* Esconde o excesso de texto se a tela for pequena */
+    text-overflow: ellipsis; /* Adiciona "..." no final do texto se ele não couber todo */
 }
 
 .logout{
