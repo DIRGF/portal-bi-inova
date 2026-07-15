@@ -128,6 +128,17 @@ body{
     box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Cria um espaçamento elegante de 20px entre o Logo e o Título */
+}
+
+.header-logo {
+    height: 38px; /* Altura ideal para ficar proporcional ao cabeçalho */
+    width: auto;
+}
+
 .header-title{
     color:var(--azul);
     font-weight:700;
@@ -304,25 +315,25 @@ body{
     .content {
         height: 100vh;
         max-height: 100vh;
-        overflow: hidden; /* Deixa o cabeçalho fixo e segura o tamanho */
+        overflow: hidden; 
     }
 
     /* Força a criação da barra de rolagem apenas na área dos cards */
     #home {
         flex: 1;
         overflow-y: auto !important; 
-        -webkit-overflow-scrolling: touch; /* Rolagem fluida no mobile */
+        -webkit-overflow-scrolling: touch; 
         height: auto; 
     }
 
-    /* Ajusta os cards para 1 por linha e dá espaço no final para rolagem */
+    /* Ajusta os cards para 1 por linha */
     .cards {
         grid-template-columns: 1fr; 
         padding: 15px; 
-        padding-bottom: 80px; /* Garante que o último card não fique escondido lá embaixo */
+        padding-bottom: 80px; 
     }
 
-    /* Reduz espaçamentos para caber melhor na tela do celular */
+    /* Reduz espaçamentos dos títulos na página inicial */
     .titulo-home {
         padding: 20px 15px 5px;
         font-size: 22px;
@@ -333,13 +344,18 @@ body{
         font-size: 14px;
     }
 
-    /* Ajustes no cabeçalho */
+    /* Ajustes no cabeçalho para Mobile */
     .header {
         padding: 0 15px;
     }
 
+    /* NOVIDADE: Esconde o título longo no celular para não poluir e não espremer o botão */
     .header-title {
-        font-size: 13px; 
-        white-space: normal; 
+        display: none; 
+    }
+
+    /* NOVIDADE: Mantém o logo no topo do celular, mas um pouquinho menor para ficar delicado */
+    .header-logo {
+        height: 28px;
     }
 }
