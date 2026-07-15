@@ -313,10 +313,38 @@ body{
    AJUSTES DE RESPONSIVIDADE (PC & MOBILE)
    ========================================= */
 
-/* 1. NAVEGADOR PC: Esconde o menu lateral (telas maiores que 1024px) */
+/* 1. NAVEGADOR PC: Esconde o menu lateral e estiliza o cabeçalho premium */
 @media (min-width: 1025px) {
     .sidebar {
         display: none !important;
+    }
+
+    /* Nova altura de 78px (50% maior) e fundo com o azul da marca */
+    .header {
+        height: 78px !important;
+        background: var(--azul) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil para acabamento */
+        transition: all 0.3s ease;
+    }
+
+    /* Texto em branco para dar contraste perfeito sobre o fundo escuro */
+    .header-title {
+        color: #ffffff !important;
+        font-size: 22px; /* Fonte ligeiramente maior para acompanhar a barra robusta */
+    }
+
+    /* Logo ampliado proporcionalmente para preencher a nova altura */
+    .header-logo {
+        height: 52px !important;
+    }
+
+    /* Botão Sair ligeiramente mais robusto e elegante para o novo cabeçalho */
+    .logout {
+        padding: 10px 18px;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 }
 
