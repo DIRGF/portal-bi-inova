@@ -1,4 +1,3 @@
-
 *{
     margin:0;
     padding:0;
@@ -286,8 +285,54 @@ body{
     background:#e9ecef;
 }
 
-@media (max-width:1024px){
-    .cards{
-        grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+
+/* =========================================
+   AJUSTES DE RESPONSIVIDADE (PC & MOBILE)
+   ========================================= */
+
+/* 1. NAVEGADOR PC: Esconde o menu lateral (telas maiores que 1024px) */
+@media (min-width: 1025px) {
+    .sidebar {
+        display: none !important;
     }
 }
+
+/* 2. SMARTPHONES: Mantém o menu, mas ajusta a rolagem e os cards */
+@media (max-width: 1024px) {
+    /* Força o container principal a ter rolagem própria, destravando a tela */
+    #home {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Deixa a rolagem fluida em iPhones */
+        height: calc(100vh - var(--header-height)); /* Define a altura exata da área visível */
+    }
+
+    /* Ajusta os cards para ficarem um embaixo do outro no celular */
+    .cards {
+        grid-template-columns: 1fr; /* 1 card por linha (evita que sejam cortados) */
+        padding: 15px; /* Reduz as bordas laterais para aproveitar mais a tela */
+        padding-bottom: 50px; /* Espaço extra no final para o último card não colar no fundo */
+    }
+
+    /* Reduz um pouco os espaçamentos dos títulos para caberem bem no celular */
+    .titulo-home {
+        padding: 20px 15px 5px;
+        font-size: 22px;
+    }
+
+    .subtitulo-home {
+        padding: 0 15px 20px;
+        font-size: 14px;
+    }
+
+    /* Ajustes no cabeçalho para o texto não sobrepor o botão de Sair */
+    .header {
+        padding: 0 15px;
+    }
+
+    .header-title {
+        font-size: 13px; /* Reduz a fonte do título longo no mobile */
+        white-space: normal; /* Permite quebrar linha se o celular for muito estreito */
+    }
+}
+
