@@ -52,8 +52,19 @@ const paineis = {
         url:"https://app.powerbi.com/view?r=eyJrIjoiYjJkYTJhYjItODY1ZC00ODRkLWE4MWYtODBlMjBmOWRjNWNlIiwidCI6IjM1YWFmNDRiLWQ2Y2EtNGU1OC1hMmRhLTg5ODZkYzgxZTMzNCJ9"
     },
 
-    indicadoresHospitalares:{
+    
+    faturamento:{
         grupo:"Assistencial",
+        titulo:"Faturamento",
+        icone:"bi-receipt",
+        cor: "#f39c12",
+        url:"https://app.powerbi.com/view?r=eyJrIjoiOGFlOGUwZWItZmRkZi00Nzg2LWJiYWMtMGUxZWJkMTAyNGZkIiwidCI6IjM1YWFmNDRiLWQ2Y2EtNGU1OC1hMmRhLTg5ODZkYzgxZTMzNCJ9"
+    },
+    
+    
+    
+    indicadoresHospitalares:{
+        grupo:"Contabilidade",
         titulo:"Indicadores Hospitalares",
         icone:"bi-graph-up-arrow",
         cor: "#9b59b6",
