@@ -77,6 +77,51 @@ function gerarCards(){
         </div>
         <strong>E-mail</strong>
     </div>`;
+
+    // Card do KPIH
+    cards.innerHTML += `
+    <div class="card" onclick="abrirKPIH()">
+        <div style="font-size:34px;margin-bottom:10px; color: #10bf00ce;">
+            <i class="bi bi-cash-coin"></i>
+        </div>
+        <strong>KPIH</strong>
+    </div>`;
+
+    // Card do GPI
+    cards.innerHTML += `
+    <div class="card" onclick="abrirGPI()">
+        <div style="font-size:34px;margin-bottom:10px; color: #bfac00ce;">
+            <i class="bi bi-calculator-fill"></i>
+        </div>
+        <strong>GPI</strong>
+    </div>`;
+
+    // Card do Efetivo
+    cards.innerHTML += `
+    <div class="card" onclick="abrirEfetivo()">
+        <div style="font-size:34px;margin-bottom:10px; color: #0089bfce;">
+            <i class="bi bi-search"></i>
+        </div>
+        <strong>Efetivo</strong>
+    </div>`;
+
+    // Card do DRG
+    cards.innerHTML += `
+    <div class="card" onclick="abrirDRG()">
+        <div style="font-size:34px;margin-bottom:10px; color: #bf6c00ce;">
+            <i class="bi bi-award-fill"></i>
+        </div>
+        <strong>DRG</strong>
+    </div>`;
+
+    // Card do Bionexo
+    cards.innerHTML += `
+    <div class="card" onclick="abrirBionexo()">
+        <div style="font-size:34px;margin-bottom:10px; color: #ffffff;">
+            <i class="bi bi-cart2"></i>
+        </div>
+        <strong>Bionexo</strong>
+    </div>`;
 }
 
 // GERAÇÃO DO MENU LATERAL
@@ -111,6 +156,10 @@ function gerarMenu(){
 
     <div class="menu-item" onclick="abrirEdocs()">
         <i class="bi bi-window-dock" style="color: #bec0c2;"></i><span>E-docs</span>    
+    </div>
+
+    <div class="menu-item" onclick="abrirZimbra()">
+        <i class="bi bi-envelope-fill" style="color: #132c73;"></i><span>E-mail</span>    
     </div>
 
     <div class="menu-item" onclick="abrirKPIH()">
