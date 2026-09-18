@@ -1,0 +1,20 @@
+{
+  "name": "Portal de Aplicativos - DIRGF - Fundação INOVA",
+  "short_name": "Portal DIRGF",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#132c73",
+  "icons": [
+    {
+      "src": "img/icone_inova.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icone_inova.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
